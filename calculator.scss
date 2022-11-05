@@ -1,0 +1,58 @@
+.container{
+    width: 650px;
+    height: auto;
+    background-color: aquamarine;
+    padding: 1rem;
+    border-radius: 10px;
+
+    @media(max-width:520px){
+        width:90vw;
+    }
+    .screen{
+        width: 100%; 
+        height: 120px; 
+        background-color: white;
+        border: 3px solid black; 
+        border-radius: 5px;
+        color: black; 
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5rem;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        .input,.output{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 0.5rem;
+            font-weight: bold;
+        }
+        .input{
+            flex: 1;
+            background-color: grey;
+            font-size: 2.5rem;
+            color: white; 
+            @media(max-width:520px){
+                font-size: 2rem;
+            }
+        }
+        .output{
+            flex:1;
+            font-size: 3rem;
+            span{
+                margin-right: 0.5rem;
+            }
+            @media(max-width:520px){
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .keypad{
+        width: 100%;
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: .3rem;
+    }
+}
